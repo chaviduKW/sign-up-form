@@ -1,0 +1,197 @@
+:root {
+    --color: #df1a62;
+    --txt: rgb(185, 185, 185)
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--txt);
+
+
+    /* outline: 1px solid red; */
+}
+
+html,
+body {
+    height: 100%;
+}
+
+h2{
+    padding:20px;
+    color: white
+}
+
+.phoneLogo{
+    display: none;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    background-color: #1f203b
+}
+
+.leftContent {
+
+    height: 100%;
+    width: 30%;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    background-color: #5629b3;
+
+    flex: 1;
+}
+
+img {
+
+
+    /* align-items: center;
+  justify-content: center; */
+
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.rightContent {
+    padding: 5%;
+    /* width: 1000px; */
+    flex: 1;
+
+}
+
+input {
+    width: 70%;
+
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--color);
+}
+
+
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--color);
+    font-weight: 700;
+    font-size: 1.2em;
+    border: 2px solid var(--color);
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 40px 0;
+}
+
+button:hover {
+    background-color: var(--color);
+    color: black;
+
+}
+
+.log-in {
+    display: flex;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color);
+    font-weight: 700;
+}
+
+a:hover {
+    color: white;
+}
+
+
+.full-form {
+    display: inline-grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.input {
+    display: flex;
+    /* flex-flow: column wrap; */
+    flex-direction: column;
+    width: max(300px 100%);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+
+}
+
+.left-form,
+.right-form {
+    flex: 1;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .full-form {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: stretch; */
+        flex: 1;
+    }
+
+    input {
+        width: 80%
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .leftContent {
+
+        display: none;
+    }
+
+    img {
+        display: none;
+    }
+
+    .full-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        align-items: center
+    }
+
+    .form-title{
+        text-align: center;
+    }
+
+    .left-button{
+        text-align: center;
+    }
+    .log-in{
+        display: flex; justify-content: center;
+    }
+
+    input {
+        width: 100%
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phoneLogo{
+        display: block;
+        margin-top: 10px;
+    }
+    
+}
